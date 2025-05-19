@@ -1,5 +1,5 @@
 import { Image } from 'expo-image';
-import { Platform, StyleSheet } from 'react-native';
+import { StyleSheet } from 'react-native';
 
 import { HelloWave } from '@/components/HelloWave';
 import ParallaxScrollView from '@/components/ParallaxScrollView';
@@ -15,40 +15,32 @@ export default function HomeScreen() {
           source={require('@/assets/images/partial-react-logo.png')}
           style={styles.reactLogo}
         />
-      }>
+      }
+    >
       <ThemedView style={styles.titleContainer}>
         <ThemedText type="title">Welcome!</ThemedText>
         <HelloWave />
       </ThemedView>
-      <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Step 1: Try it</ThemedText>
-        <ThemedText>
-          Edit <ThemedText type="defaultSemiBold">app/(tabs)/index.tsx</ThemedText> to see changes.
-          Press{' '}
-          <ThemedText type="defaultSemiBold">
-            {Platform.select({
-              ios: 'cmd + d',
-              android: 'cmd + m',
-              web: 'F12',
-            })}
-          </ThemedText>{' '}
-          to open developer tools.
+
+      <ThemedView style={styles.section}>
+        <ThemedText type="default">
+          👋 Welcome to <ThemedText type="defaultSemiBold">TrackFit</ThemedText> — your companion for staying
+          consistent with your fitness goals!
         </ThemedText>
-      </ThemedView>
-      <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Step 2: Explore</ThemedText>
-        <ThemedText>
-          {`Tap the Explore tab to learn more about what's included in this starter app.`}
+        <ThemedText type="default" style={styles.paragraph}>
+          🏃‍♂️ Fitness is crucial for a healthy lifestyle. TrackFit helps you stay accountable by scheduling,
+          tracking, and analyzing your workouts.
         </ThemedText>
-      </ThemedView>
-      <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Step 3: Get a fresh start</ThemedText>
-        <ThemedText>
-          {`When you're ready, run `}
-          <ThemedText type="defaultSemiBold">npm run reset-project</ThemedText> to get a fresh{' '}
-          <ThemedText type="defaultSemiBold">app</ThemedText> directory. This will move the current{' '}
-          <ThemedText type="defaultSemiBold">app</ThemedText> to{' '}
-          <ThemedText type="defaultSemiBold">app-example</ThemedText>.
+        <ThemedText type="default" style={styles.paragraph}>
+          ➕ To add a workout session, tap the <ThemedText type="defaultSemiBold">Add</ThemedText> tab below.
+        </ThemedText>
+        <ThemedText type="default" style={styles.paragraph}>
+          📊 To view your <ThemedText type="defaultSemiBold">upcoming, completed,</ThemedText> or{' '}
+          <ThemedText type="defaultSemiBold">missed</ThemedText> workouts, tap the{' '}
+          <ThemedText type="defaultSemiBold">Stats</ThemedText> tab.
+        </ThemedText>
+        <ThemedText type="default" style={styles.paragraph}>
+          ✅ Stay active, stay consistent — and let TrackFit be your guide!
         </ThemedText>
       </ThemedView>
     </ParallaxScrollView>
@@ -61,8 +53,11 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     gap: 8,
   },
-  stepContainer: {
-    gap: 8,
+  section: {
+    gap: 12,
+    marginVertical: 16,
+  },
+  paragraph: {
     marginBottom: 8,
   },
   reactLogo: {
