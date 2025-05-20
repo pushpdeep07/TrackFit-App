@@ -1,50 +1,102 @@
-# Welcome to your Expo app 👋
+# 🏋️‍♂️ TrackFit App
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+TrackFit is a fitness tracking app built using **React Native**, **Expo Router**, and **Context API**. The app helps users manage and monitor their daily workout schedules by allowing them to:
 
-## Get started
+- Add workouts with title, date, and time range.
+- View categorized workouts (Upcoming, Completed, and Missed).
+- Mark workouts as completed.
+- Delete any workout, whether it's upcoming, completed, or missed.
 
-1. Install dependencies
+This application is structured in a modular way to ensure maintainability and scalability.
 
-   ```bash
-   npm install
-   ```
+---
 
-2. Start the app
+## 📂 Folder & File Structure Overview
 
-   ```bash
-   npx expo start
-   ```
+Here's a quick overview of important folders and files:
 
-In the output, you'll find options to open the app in a
+### `App.js`
+- Entry point of the app. It sets up the app's root using the Expo Router and handles global context providers (like WorkoutContext).
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+### `/app/`
+- Contains the routing structure powered by Expo Router.
+- Includes tabs such as:
+  - `index.tsx`: Home screen.
+  - `add.tsx`: Add Workout screen.
+  - `stats.tsx`: Stats screen to manage and view workouts.
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+### `/components/`
+- Reusable UI components like `WorkoutItem`, `HelloWave`, `ParallaxScrollView`, etc.
+- Ensures consistent design across screens.
 
-## Get a fresh project
+### `/context/WorkoutContext.js`
+- Manages the global state of workouts.
+- Provides functions to add workouts, mark them completed, delete them, and auto-detect missed workouts.
 
-When you're ready, run:
+### `/navigation/AppNavigator.js` (if used)
+- Defines stack or tab navigation (mostly handled by Expo Router in this project).
+
+### `/screens/`
+- Contains main screen components like:
+  - `HomeScreen.js`
+  - `AddWorkoutScreen.js`
+  - `StatsScreen.js`
+
+### `/utils/storage.js`
+- Handles persistent local storage of workouts using `AsyncStorage`.
+
+---
+
+## 📱 App Functionality
+
+### 🏠 Home Screen
+- Welcomes the user with an introduction to the TrackFit app.
+- Explains the importance of tracking workouts for personal fitness.
+- Guides users to navigate the app using the tab bar:
+  - Tap "Add" to log a new workout session.
+  - Tap "Stats" to view your upcoming, completed, or missed workouts.
+
+### ➕ Add Screen
+- Lets users add a workout with:
+  - Title (e.g., "Morning Cardio")
+  - Date (e.g., 2025-05-20)
+  - Time Range (Start and End time)
+
+### 📊 Stats Screen
+- Displays all workouts divided into:
+  - ✅ Upcoming Workouts
+  - 🟩 Completed Workouts
+  - ❌ Missed Workouts (automatically detected based on current time)
+- Allows:
+  - Marking upcoming workouts as completed
+  - Deleting any workout in any category
+
+---
+
+## 💡 Why TrackFit?
+
+Staying fit and consistent with your workout schedule is vital for long-term health and well-being. TrackFit helps you stay accountable by giving you a clear picture of what you’ve planned, what you’ve completed, and what you’ve missed. It acts like a digital fitness log — right in your pocket.
+
+---
+
+## 📌 Tech Stack
+
+- React Native + Expo Router
+- Context API for global state
+- AsyncStorage for persistent storage
+- TypeScript for type safety
+
+---
+
+## 📷 Screenshots (Optional)
+_Add screenshots of the home, add, and stats screen here for a visual overview._
+
+---
+
+## ✅ Setup Instructions
 
 ```bash
-npm run reset-project
-```
-
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+git clone https://github.com/yourusername/TrackFit-App.git
+cd TrackFit-App
+npm install
+npx expo start
