@@ -89,7 +89,18 @@ Staying fit and consistent with your workout schedule is vital for long-term hea
 ---
 
 ## 📷 Screenshots (Optional)
-_Add screenshots of the home, add, and stats screen here for a visual overview._
+![Image](https://github.com/user-attachments/assets/179659f6-c4c9-47c6-a5d6-603e25e3244b)
+
+![Image](https://github.com/user-attachments/assets/cba7fef7-76b4-4376-960e-a552ee96ad4c)
+
+![Image](https://github.com/user-attachments/assets/f03b8f88-d501-4a81-a1de-93f617e9a8a2)
+
+![Image](https://github.com/user-attachments/assets/f4ce317b-a24e-4083-b978-d5c4be233ba0)
+
+![Image](https://github.com/user-attachments/assets/078b6f23-5b4f-44be-a113-b0a556125388)
+
+![Image](https://github.com/user-attachments/assets/2b049af3-a50e-4f5f-8a0a-7ce9d93973bf)
+
 
 ---
 
